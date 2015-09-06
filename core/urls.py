@@ -19,4 +19,6 @@ from django.contrib import admin
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^gcm/', include('gcm.urls')),
+    url(r'^generator/', include('generator.urls')),
+    url(r'^registration/', include('registration.urls')),
 ]

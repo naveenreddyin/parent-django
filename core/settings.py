@@ -42,6 +42,9 @@ INSTALLED_APPS = (
     'rest_framework',
     # internal apps
     'gcm',
+    'registration',
+    'generator',
+    'connector',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -87,6 +90,13 @@ DATABASES = {
     }
 }
 
+REST_FRAMEWORK = {
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.AllowAny'
+    ]
+}
+
+REST_SESSION_LOGIN = False
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.8/topics/i18n/
